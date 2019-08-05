@@ -8,22 +8,22 @@
 
 	}
 
-	/// <summary>
-	/// Represent to inject scope lifetime for dependency injection.
-	/// </summary>
-	public interface IScoped : IDependencyService
+    /// <summary>
+    /// Represent that dependency injection for scoped lifetime.
+    /// </summary>
+    public interface IScoped : IDependencyService
 	{
 	}
 
     /// <summary>
-    /// Represent to inject singleton lifetime for dependency injection.
+    /// Represent that dependency injection for singleton lifetime.
     /// </summary>
     public interface ISingleton : IDependencyService
 	{
 	}
 
     /// <summary>
-    /// Represent to inject trasient lifetime for dependency injection.
+    /// Represent that dependency injection for transient lifetime.
     /// </summary>
     public interface ITransient : IDependencyService
 	{

@@ -4,23 +4,23 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>William Chow</Authors>
-    <PackageId>Mikpro.AutoService</PackageId>
-    <Product>Mikpro.AutoService</Product>
+    <PackageId>Mikpro.AutoInject</PackageId>
+    <Product>Mikpro.AutoInject</Product>
     <Description>The extensions for Microsoft.Extensions.DependencyInjection witch can scan specify assemblies or types to inject into ServiceCollection automatically that has implemented the interface ITransient, IScoped or ISingleton.</Description>
     <Copyright>Copyright © William Chow 2019</Copyright>
     <RepositoryType>Github</RepositoryType>
     <PackageTags>Dependency Injection DI Services</PackageTags>
-    <RepositoryUrl>https://github.com/william-master-chow/AutoService.git</RepositoryUrl>
+    <RepositoryUrl>https://github.com/william-master-chow/AutoInject.git</RepositoryUrl>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <OutputPath>bin\Debug</OutputPath>
-    <DocumentationFile>bin\Debug\AutoService.xml</DocumentationFile>
+    <DocumentationFile>bin\Debug\AutoInject.xml</DocumentationFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <OutputPath>bin\Release</OutputPath>
-    <DocumentationFile>bin\Release\AutoService.xml</DocumentationFile>
+    <DocumentationFile>bin\Release\AutoInject.xml</DocumentationFile>
     <FileAlignment>2048</FileAlignment>
     <DebugType>none</DebugType>
     <DebugSymbols>false</DebugSymbols>

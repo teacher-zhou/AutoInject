@@ -9,7 +9,7 @@ namespace Microsoft.Extensions.DependencyInjection
     /// <summary>
     /// The extension of <see cref="IServiceCollection"/> for auto services.
     /// </summary>
-    public static class AutoServiceExtensions
+    public static class AutoInjectExtensions
     {
         /// <summary>
         /// These types should be ignored for injection.
@@ -21,9 +21,9 @@ namespace Microsoft.Extensions.DependencyInjection
         /// </summary>
         /// <param name="services">The instance of <see cref="IServiceCollection"/>.</param>
         /// <returns>The instance of <see cref="IServiceCollection"/> .</returns>
-        public static IServiceCollection AddAutoService(this IServiceCollection services)
+        public static IServiceCollection AddAutoInject(this IServiceCollection services)
         {
-            return services.AddAutoService("*");
+            return services.AddAutoInject("*");
         }
 
         /// <summary>
@@ -36,11 +36,11 @@ namespace Microsoft.Extensions.DependencyInjection
         /// but it doesn't support regular expressions.
         /// </param>
         /// <returns>The instance of <see cref="IServiceCollection"/> .</returns>
-        public static IServiceCollection AddAutoService(this IServiceCollection services, string searchPattern)
+        public static IServiceCollection AddAutoInject(this IServiceCollection services, string searchPattern)
         {
             var baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
             var assemblies = Directory.GetFiles(baseDirectory, $"{searchPattern}.dll").Select(m => Assembly.LoadFrom(m));
-            return services.AddAutoService(assemblies.ToArray());
+            return services.AddAutoInject(assemblies.ToArray());
         }
 
         /// <summary>
@@ -49,7 +49,7 @@ namespace Microsoft.Extensions.DependencyInjection
         /// <param name="service">The instance of <see cref="IServiceCollection"/>.</param>
         /// <param name="assemblies">The assemblies to scan.</param>
         /// <returns>The instance of <see cref="IServiceCollection"/> .</returns>
-        public static IServiceCollection AddAutoService(this IServiceCollection services,Assembly[] assemblies)
+        public static IServiceCollection AddAutoInject(this IServiceCollection services,Assembly[] assemblies)
         {
             if (assemblies is null)
             {
@@ -57,17 +57,17 @@ namespace Microsoft.Extensions.DependencyInjection
             }
 
             var allTypes = assemblies.SelectMany(m => m.GetTypes());
-            return services.AddAutoService(allTypes.ToArray());
+            return services.AddAutoInject(allTypes.ToArray());
         }
 
         /// <summary>
         /// Add the service to scan the specify types and inject the implementation with service automatically into <see cref="IServiceCollection"/> .
         /// </summary>
-        /// <param name="service">The instance of <see cref="IServiceCollection"/>.</param>
+        /// <param name="services">The instance of <see cref="IServiceCollection"/>.</param>
         /// <param name="types">The types to scan.</param>
         /// <returns>The instance of <see cref="IServiceCollection"/> .</returns>
         /// <exception cref="ArgumentNullException"><paramref name="types"/> is null.</exception>
-        public static IServiceCollection AddAutoService(this IServiceCollection services, Type[] types)
+        public static IServiceCollection AddAutoInject(this IServiceCollection services, Type[] types)
         {
             if (types is null)
             {

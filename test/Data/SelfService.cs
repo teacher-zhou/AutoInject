@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace AutoService.Test.Data
+namespace AutoInject.Test.Data
 {
     /*******************
      * The service for self injection.
