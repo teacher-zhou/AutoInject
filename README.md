@@ -10,6 +10,7 @@ The package deploy on [Nuget](https://www.nuget.org/packages/Mikpro.AutoInject) 
 - [New]Resolve the service automatically while the instance implement from `ITransient`,`IScoped` or `ISingleton`.
 
 
+
 # Why to use?
 In DI of `.NET Core`, user always inject the services in `ConfigureServices` manually, but sometimes the would get the message `Unable to resolve xxxxx from service` while running because forgot to inject to the container.
 
@@ -107,3 +108,5 @@ public MyController(IRepository<Entity> repository, IRepository<int, List<int>> 
     
 }
 ```
+
+Any Issues, please report [here](https://github.com/Michael-Pro/AutoInject/issues) or email me [william-zzh@outlook.com](mailto:william-zzh@outlook.com)
