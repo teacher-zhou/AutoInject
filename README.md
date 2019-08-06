@@ -2,7 +2,7 @@
 The extension of Microsoft.Extensions.DependencyInjection to inject all services automatically for implementations.
 
 # Where to get?
-The package deploy on [Nuget](http://www.nuget.org) and the code can view on [Github](https://github.com/Michael-Pro/AutoInject). You can install from `Package Management Console` with command as below:
+The package deploy on [Nuget](https://www.nuget.org/packages/Mikpro.AutoInject) and the code can view on [Github](https://github.com/Michael-Pro/AutoInject). You can install from `Package Management Console` with command as below:
 > Install-Package Micpro.AutoInject 
 
 # Release Note for v1.0.0
