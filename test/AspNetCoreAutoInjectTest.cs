@@ -179,5 +179,19 @@ namespace AutoInject.Test
             Equal(service3.Id, service4.Id);
         }
         #endregion
+
+        #region test generic type
+        [Fact(DisplayName ="generic type with one or more arguments injection")]
+        public void Test_GenericType()
+        {
+            var g1 = _host.Services.GetService<IGenericType<int>>();
+            NotNull(g1);
+            IsType<GenericType<int>>(g1);
+
+            var g2 = _host.Services.GetService<IGenericType2<string, int>>();
+            NotNull(g2);
+            IsType<GenericTyp2<string, int>>(g2);
+        }
+        #endregion
     }
 }

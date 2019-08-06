@@ -46,7 +46,7 @@ namespace Microsoft.Extensions.DependencyInjection
         /// <summary>
         /// Add the service to scan the specify assemblies and inject the implementation with service automatically into <see cref="IServiceCollection"/> .
         /// </summary>
-        /// <param name="service">The instance of <see cref="IServiceCollection"/>.</param>
+        /// <param name="services">The instance of <see cref="IServiceCollection"/>.</param>
         /// <param name="assemblies">The assemblies to scan.</param>
         /// <returns>The instance of <see cref="IServiceCollection"/> .</returns>
         public static IServiceCollection AddAutoInject(this IServiceCollection services,Assembly[] assemblies)

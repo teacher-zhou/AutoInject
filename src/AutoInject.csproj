@@ -6,11 +6,13 @@
     <Authors>William Chow</Authors>
     <PackageId>Mikpro.AutoInject</PackageId>
     <Product>Mikpro.AutoInject</Product>
-    <Description>The extensions for Microsoft.Extensions.DependencyInjection witch can scan specify assemblies or types to inject into ServiceCollection automatically that has implemented the interface ITransient, IScoped or ISingleton.</Description>
+    <Description>The extensions for Microsoft.Extensions.DependencyInjection witch can scan specify assemblies or types to inject into ServiceCollection automatically that has implemented from ITransient, IScoped or ISingleton.</Description>
     <Copyright>Copyright © William Chow 2019</Copyright>
     <RepositoryType>Github</RepositoryType>
     <PackageTags>Dependency Injection DI Services</PackageTags>
-    <RepositoryUrl>https://github.com/william-master-chow/AutoInject.git</RepositoryUrl>
+    <RepositoryUrl>https://github.com/Michael-Pro/AutoInject.git</RepositoryUrl>
+    <PackageReleaseNotes>- [Add]`AddAutoInject` extensions method of `IServiceCollection` object.
+- [Add]Resolve the service automatically while the instance implement from `ITransient`,`IScoped` or `ISingleton`.</PackageReleaseNotes>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
