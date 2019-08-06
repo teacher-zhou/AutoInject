@@ -6,8 +6,8 @@ The package deploy on [Nuget](http://www.nuget.org) and the code can view on [Gi
 > Install-Package Micpro.AutoInject 
 
 # Release Note for v1.0.0
-- [Add]`AddAutoInject` extensions method of `IServiceCollection` object.
-- [Add]Resolve the service automatically while the instance implement from `ITransient`,`IScoped` or `ISingleton`.
+- [New]`AddAutoInject` extensions method of `IServiceCollection` object.
+- [New]Resolve the service automatically while the instance implement from `ITransient`,`IScoped` or `ISingleton`.
 
 
 # Why to use?
@@ -28,7 +28,7 @@ services.AddTransient<xxx>();
 services.AddSingletone<xxx>();
 //.....
 ```
-once you forget some service to inject, you will get the exception thrown *<u>Unable to resolve xxxxxx from service</u>*.
+once you forget some service to inject, you will get the exception thrown *Unable to resolve xxxxxx from service*.
 
 So I consider about the injection could be automatically.
 
